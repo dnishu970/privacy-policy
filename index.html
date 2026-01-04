@@ -1,36 +1,245 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Privacy Policy</title>
+    <meta charset="UTF-8">
+    <title>Privacy Policy - Sub Manage Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 24px;
+            background-color: #f9f9fb;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #ffffff;
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        h1, h2, h3 {
+            color: #4b2aad;
+        }
+        h1 {
+            margin-bottom: 8px;
+        }
+        .updated {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 24px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        .note {
+            background: #f1edff;
+            padding: 12px 16px;
+            border-left: 4px solid #4b2aad;
+            margin: 16px 0;
+        }
+        footer {
+            margin-top: 32px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-<h1>Privacy Policy</h1>
 
-<p>This privacy policy applies to the mobile application developed by us.</p>
+<div class="container">
 
-<h2>Information Collection and Use</h2>
-<p>The app may collect basic user information such as email address and usage data to provide and improve the service.</p>
+    <h1>Privacy Policy</h1>
+    <div class="updated">Last updated: [Add date]</div>
 
-<h2>Firebase Services</h2>
-<p>The app uses Firebase services (such as Firestore and Authentication) which may collect data as per Google Firebase's privacy policy.</p>
+    <h2>1. Introduction</h2>
+    <p>
+        Sub Manage Hub (“we”, “our”, “the app”) is an internal, admin-only mobile
+        application designed to help businesses record, manage, and monitor subscription
+        sales and users.
+    </p>
+    <p>This Privacy Policy explains:</p>
+    <ul>
+        <li>What data we collect</li>
+        <li>Why we collect it</li>
+        <li>How the data is used and protected</li>
+        <li>Whether the app requires any device permissions</li>
+    </ul>
+    <p>
+        By using this application, you agree to this Privacy Policy.
+    </p>
 
-<h2>Data Sharing</h2>
-<p>We do not share personal data with third parties except as required to provide app functionality or comply with legal obligations.</p>
+    <h2>2. Who Can Use This App</h2>
+    <ul>
+        <li>This application is <strong>not a public consumer app</strong></li>
+        <li>It is intended only for <strong>authorized admin users</strong></li>
+        <li>Accounts are created and managed externally by the app owner</li>
+        <li>There is no public sign-up inside the app</li>
+    </ul>
 
-<h2>Data Security</h2>
-<p>We take reasonable measures to protect user data using industry-standard practices.</p>
+    <h2>3. Purpose of the Application</h2>
+    <p>The app helps administrators to:</p>
+    <ul>
+        <li>Record subscription sales (monthly or yearly)</li>
+        <li>Track active and expired subscriptions</li>
+        <li>Search users by email or phone number</li>
+        <li>View sales activity and purchase history</li>
+        <li>Soft-delete and restore subscription records</li>
+        <li>Manage additional notification email addresses</li>
+        <li>Export business data (users, purchases, emails) via email</li>
+    </ul>
 
-<h2>User Rights</h2>
-<p>Users may request deletion of their data by contacting us at the email provided below.</p>
+    <h2>4. Information We Collect</h2>
+    <p>
+        The app collects <strong>only business-related data</strong> entered by authorized admins.
+    </p>
 
-<h2>Children’s Privacy</h2>
-<p>This app is not intended for children under the age of 13.</p>
+    <h3>A. Admin Account Information</h3>
+    <p>Collected via Firebase Authentication:</p>
+    <ul>
+        <li>Admin email address</li>
+        <li>Authentication UID</li>
+    </ul>
+    <p>Used for:</p>
+    <ul>
+        <li>Secure login</li>
+        <li>User authorization</li>
+        <li>Export request validation</li>
+    </ul>
 
-<h2>Changes to This Policy</h2>
-<p>This privacy policy may be updated from time to time.</p>
+    <h3>B. Subscription & User Data (Entered by Admin)</h3>
+    <p>When an admin adds a record, the app may store:</p>
+    <ul>
+        <li>Customer email address</li>
+        <li>Customer phone number (with country code)</li>
+        <li>Subscription plan (Monthly / Yearly)</li>
+        <li>Amount paid</li>
+        <li>Purchase date and expiry date</li>
+    </ul>
+    <p>
+        This information is entered manually by the admin and is used strictly for
+        subscription management purposes.
+    </p>
 
-<h2>Contact Us</h2>
-<p>If you have any questions, contact us at: <b>dnishu970@gmail.com</b></p>
+    <h3>C. Extra Notification Emails</h3>
+    <p>
+        Admins may optionally store additional email addresses used for reports or exports.
+    </p>
+
+    <h3>D. Export Metadata</h3>
+    <p>When an export is requested, we store:</p>
+    <ul>
+        <li>Requested email address</li>
+        <li>Export type</li>
+        <li>Export status and timestamps (queued, running, emailed, failed)</li>
+    </ul>
+
+    <h2>5. How We Use the Data</h2>
+    <p>Collected data is used only to:</p>
+    <ul>
+        <li>Display subscription records inside the app</li>
+        <li>Calculate active and expired subscriptions</li>
+        <li>Enable search and filtering</li>
+        <li>Send requested exports via email</li>
+        <li>Support restoration of recently deleted records</li>
+    </ul>
+
+    <div class="note">
+        We do <strong>not</strong> sell, rent, share, or use data for advertising or marketing.
+    </div>
+
+    <h2>6. Data Storage & Security</h2>
+    <ul>
+        <li>All data is stored securely using Firebase services</li>
+        <li>Authentication is handled by Firebase Authentication</li>
+        <li>App data is stored in Firebase Firestore</li>
+        <li>Export files are generated via secure Cloud Functions</li>
+        <li>Export files are sent as email attachments and are not publicly accessible</li>
+    </ul>
+
+    <p>Soft-deleted records are:</p>
+    <ul>
+        <li>Hidden from main screens</li>
+        <li>Retained for up to 30 days</li>
+        <li>Permanently deleted after the retention period</li>
+    </ul>
+
+    <h2>7. App Permissions</h2>
+    <h3>❌ No Special Device Permissions Required</h3>
+    <p>This app does <strong>not</strong> request access to:</p>
+    <ul>
+        <li>Camera</li>
+        <li>Microphone</li>
+        <li>Location</li>
+        <li>Contacts</li>
+        <li>SMS</li>
+        <li>Storage (photos or files)</li>
+        <li>Call logs</li>
+    </ul>
+
+    <h3>✅ Internet Access Only</h3>
+    <ul>
+        <li>Required to connect to Firebase services</li>
+        <li>Used for authentication, data synchronization, and exports</li>
+    </ul>
+
+    <h2>8. Third-Party Services</h2>
+    <p>The app uses the following trusted third-party services:</p>
+    <ul>
+        <li>Firebase (Authentication, Firestore, Cloud Functions)</li>
+        <li>Email service (SendGrid) for delivering export files</li>
+    </ul>
+    <p>
+        These services process data only to provide core application functionality.
+    </p>
+
+    <h2>9. Data Retention</h2>
+    <ul>
+        <li>Active data is retained until deleted by an admin</li>
+        <li>Soft-deleted records are retained for 30 days</li>
+        <li>Deleted records are permanently removed after 30 days</li>
+        <li>Export records are retained only for audit and delivery tracking</li>
+    </ul>
+
+    <h2>10. Children’s Privacy</h2>
+    <p>
+        This application is not intended for children and does not target users under
+        the age of 13.
+    </p>
+
+    <h2>11. User Control & Responsibility</h2>
+    <ul>
+        <li>Admins are responsible for the data they enter</li>
+        <li>Admins should ensure they have legal rights to store customer information</li>
+        <li>Admins can delete or restore records within the app</li>
+    </ul>
+
+    <h2>12. Changes to This Policy</h2>
+    <p>
+        We may update this Privacy Policy from time to time. Any changes will be reflected
+        with an updated “Last updated” date.
+    </p>
+
+    <h2>13. Contact Information</h2>
+    <p>
+        If you have questions about this Privacy Policy or data handling, please contact:
+    </p>
+    <p>
+        <strong>Email:</strong> dnishu970@gmail.com <br>
+        <strong>App Name:</strong> Sub Manage Hub
+    </p>
+
+    <footer>
+        © [Year] Sub Manage Hub. All rights reserved.
+    </footer>
+
+</div>
 
 </body>
 </html>

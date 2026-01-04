@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -11,20 +11,17 @@
       --text:#111827;
       --muted:#6b7280;
       --border:#e5e7eb;
-      --purple:#4f46e5;   /* main heading */
-      --purple2:#4338ca;  /* section heading */
+      --purple:#4f46e5;
+      --purple2:#4338ca;
     }
-
-    *{box-sizing:border-box}
+    *{ box-sizing:border-box; }
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
       background: var(--bg);
       color: var(--text);
-      line-height: 1.7;
+      line-height: 1.75;
     }
-
-    /* Page padding similar to screenshot */
     .page{
       min-height:100vh;
       padding: 28px 16px 60px;
@@ -32,8 +29,6 @@
       justify-content:center;
       align-items:flex-start;
     }
-
-    /* Center white card */
     .card{
       width: min(980px, 100%);
       background: var(--card);
@@ -42,49 +37,41 @@
       padding: clamp(22px, 3vw, 44px);
       box-shadow: 0 10px 30px rgba(17,24,39,.06);
     }
-
     h1{
       margin: 0 0 6px 0;
       font-size: clamp(28px, 3vw, 40px);
-      letter-spacing: .2px;
       color: var(--purple);
       font-weight: 800;
+      letter-spacing: .2px;
     }
-
     .updated{
       margin: 0 0 26px 0;
       color: var(--muted);
       font-size: 14px;
     }
-
     h2{
       margin: 26px 0 10px 0;
       font-size: clamp(18px, 2.2vw, 26px);
       color: var(--purple2);
       font-weight: 800;
     }
-
+    h3{
+      margin: 14px 0 6px 0;
+      font-size: 16px;
+      color: var(--text);
+      font-weight: 700;
+    }
     p{
       margin: 10px 0;
-      color: #111827;
       font-size: 15.5px;
     }
-
-    ul{
-      margin: 10px 0 14px 24px;
-      padding: 0 0 0 14px;
+    hr{
+      border:0;
+      border-top:1px solid var(--border);
+      margin: 22px 0;
     }
-    li{
-      margin: 6px 0;
-      font-size: 15.5px;
-    }
-
-    /* Subtle spacing like the screenshot */
-    .section{
-      margin-top: 8px;
-    }
-
-    /* Footer */
+    a{ color: var(--purple2); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
     .footer{
       margin-top: 24px;
       color: var(--muted);
@@ -92,202 +79,167 @@
       border-top: 1px solid var(--border);
       padding-top: 16px;
     }
-
-    /* Make the card look clean on very small screens */
-    @media (max-width: 420px){
-      ul{ margin-left: 18px; }
-      .card{ border-radius: 12px; }
-    }
   </style>
 </head>
+
 <body>
   <div class="page">
     <main class="card" role="main">
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: 4 Jan 2026</p>
+      <p class="updated">Last updated: 4 January 2026</p>
 
-      <section class="section">
-        <h2>1. Introduction</h2>
-        <p>
-          Subscription Manager (“we”, “our”, “the app”) is an internal, admin-only mobile application
-          designed to help businesses record, manage, and monitor subscription sales and users.
-        </p>
-        <p>This Privacy Policy explains:</p>
-        <ul>
-          <li>What data we collect</li>
-          <li>Why we collect it</li>
-          <li>How the data is used and protected</li>
-          <li>Whether the app requires any device permissions</li>
-        </ul>
-        <p>By using this application, you agree to this Privacy Policy.</p>
-      </section>
+      <h2>1. Introduction</h2>
+      <p>
+        Subscription Manager (“we”, “our”, or “the app”) is a mobile application built for businesses to record, manage,
+        and monitor subscription sales and customer data. This Privacy Policy describes what information we collect,
+        why we collect it, how the information is used and protected, and what permissions the application requires.
+        By accessing or using this application, you agree to the practices described in this Privacy Policy.
+      </p>
 
-      <section class="section">
-        <h2>2. Who Can Use This App</h2>
-        <ul>
-          <li>This application is <strong>not a public consumer app</strong></li>
-          <li>It is intended only for <strong>authorized admin users</strong></li>
-          <li>Accounts are created and managed externally by the app owner</li>
-          <li>There is no public sign-up inside the app</li>
-        </ul>
-      </section>
+      <hr />
 
-      <section class="section">
-        <h2>3. Purpose of the Application</h2>
-        <p>The app helps administrators to:</p>
-        <ul>
-          <li>Record subscription sales (monthly or yearly)</li>
-          <li>Track active and expired subscriptions</li>
-          <li>Search users by email or phone number</li>
-          <li>View sales activity and purchase history</li>
-          <li>Soft-delete and restore subscription records</li>
-          <li>Manage additional notification email addresses</li>
-          <li>Export business data (users, purchases, emails) via email</li>
-        </ul>
-      </section>
+      <h2>2. Who Can Use This App</h2>
+      <p>
+        Access to the app is restricted to authenticated users only. Users are required to sign up and log in using
+        email and password authentication. Each user can access only their own data. Anonymous access to the application
+        is not permitted.
+      </p>
 
-      <section class="section">
-        <h2>4. Information We Collect</h2>
-        <p>The app collects only business-related data entered by authorized admins.</p>
+      <hr />
 
-        <p><strong>A. Admin Account Information</strong><br />
-          Collected via Firebase Authentication:
-        </p>
-        <ul>
-          <li>Admin email address</li>
-          <li>Authentication UID</li>
-        </ul>
-        <p>Used for:</p>
-        <ul>
-          <li>Secure login</li>
-          <li>User authorization</li>
-          <li>Export request validation</li>
-        </ul>
+      <h2>3. Purpose of the Application</h2>
+      <p>
+        The purpose of the application is to enable authorized users to record and manage subscription-based business
+        data. The app allows users to record monthly or yearly subscription sales, automatically calculate subscription
+        expiry dates, track active and expired subscriptions, search customers using email addresses or phone numbers,
+        and view purchase and activity history. Users can also soft-delete and restore subscription records, export
+        business data such as users, purchases, and extra emails via email.
+      </p>
 
-        <p><strong>B. Subscription &amp; User Data (Entered by Admin)</strong></p>
-        <p>When an admin adds a record, the app may store:</p>
-        <ul>
-          <li>Customer email address</li>
-          <li>Customer phone number (with country code)</li>
-          <li>Subscription plan (Monthly / Yearly)</li>
-          <li>Amount paid</li>
-          <li>Purchase date and expiry date</li>
-        </ul>
-        <p>
-          This information is entered manually by the admin and is used strictly for subscription management purposes.
-        </p>
+      <hr />
 
-        <p><strong>C. Extra Notification Emails</strong></p>
-        <p>Admins may optionally store additional email addresses used for reports or exports.</p>
+      <h2>4. Information We Collect</h2>
 
-        <p><strong>D. Export Metadata</strong></p>
-        <p>When an export is requested, we store:</p>
-        <ul>
-          <li>Requested email address</li>
-          <li>Export type</li>
-          <li>Export status and timestamps (queued, running, emailed, failed)</li>
-        </ul>
-      </section>
+      <h3>Account and Authentication Information</h3>
+      <p>
+        We collect certain account-related information through Firebase Authentication. This includes the user’s email
+        address and a unique user identifier (UID). This information is used solely for login and authentication
+        purposes, enforcing user-level data access, validating export requests, and enabling role-based access control
+        such as admin and standard user permissions.
+      </p>
 
-      <section class="section">
-        <h2>5. How We Use the Data</h2>
-        <p>Collected data is used only to:</p>
-        <ul>
-          <li>Display subscription records inside the app</li>
-          <li>Calculate active and expired subscriptions</li>
-          <li>Enable search and filtering</li>
-          <li>Send requested exports via email</li>
-          <li>Support restoration of recently deleted records</li>
-        </ul>
-        <p>We do not sell, rent, share, or use data for advertising or marketing.</p>
-      </section>
+      <h3>Subscription and Customer Data</h3>
+      <p>
+        When a user adds a subscription record, the application may store customer-related information including the
+        customer’s email address, phone number with country code, selected subscription plan (monthly or yearly), amount
+        paid, purchase date, and the subscription expiry date calculated by the app. All such data is entered manually
+        by the user and is used strictly for subscription tracking and internal business management.
+      </p>
 
-      <section class="section">
-        <h2>6. Data Storage &amp; Security</h2>
-        <ul>
-          <li>All data is stored securely using Firebase services</li>
-          <li>Authentication is handled by Firebase Authentication</li>
-          <li>App data is stored in Firebase Firestore</li>
-          <li>Export files are generated via secure Cloud Functions</li>
-          <li>Export files are sent as email attachments and are not publicly accessible</li>
-        </ul>
-        <p><strong>Soft-deleted records are:</strong></p>
-        <ul>
-          <li>Hidden from main screens</li>
-          <li>Retained for up to 30 days</li>
-          <li>Permanently deleted after the retention period</li>
-        </ul>
-      </section>
+      <h3>Extra Email Addresses</h3>
+      <p>
+        Users may optionally store additional email addresses within the app for business reports. The system prevents
+        duplicate email entries at the data level to maintain accuracy and consistency.
+      </p>
 
-      <section class="section">
-        <h2>7. App Permissions</h2>
-        <p><strong>❌ No Special Device Permissions Required</strong></p>
-        <p>This app does not request access to:</p>
-        <ul>
-          <li>Camera</li>
-          <li>Microphone</li>
-          <li>Location</li>
-          <li>Contacts</li>
-          <li>SMS</li>
-          <li>Storage (photos or files)</li>
-          <li>Call logs</li>
-        </ul>
-        <p><strong>✅ Internet Access Only</strong></p>
-        <p>Required to connect to Firebase services. Used for authentication, data synchronization, and exports.</p>
-      </section>
+      <h3>Export and Audit Metadata</h3>
+      <p>
+        When a user requests a data export, the app stores metadata related to that request. This includes the requested
+        email address, the type of export (users, purchases, or extra emails), the export status, timestamps related to
+        the request lifecycle, the total number of records included, and any error messages generated during processing.
+      </p>
 
-      <section class="section">
-        <h2>8. Third-Party Services</h2>
-        <p>The app uses the following trusted third-party services:</p>
-        <ul>
-          <li>Firebase (Authentication, Firestore, Cloud Functions)</li>
-          <li>Email service (SendGrid) for delivering export files</li>
-        </ul>
-        <p>These services process data only to provide core application functionality.</p>
-      </section>
+      <hr />
 
-      <section class="section">
-        <h2>9. Data Retention</h2>
-        <ul>
-          <li>Active data is retained until deleted by an admin</li>
-          <li>Soft-deleted records are retained for 30 days</li>
-          <li>Deleted records are permanently removed after 30 days</li>
-          <li>Export records are retained only for audit and delivery tracking</li>
-        </ul>
-      </section>
+      <h2>5. How We Use the Data</h2>
+      <p>
+        All collected information is used strictly to operate and improve the core functionality of the application.
+        This includes displaying subscription data within the app, calculating subscription status, enabling searching,
+        filtering, and analytics, generating and delivering export files via email, restoring recently deleted records,
+        and maintaining audit logs for export activity. We do not sell, rent, share, or use any data for advertising,
+        profiling, or marketing purposes.
+      </p>
 
-      <section class="section">
-        <h2>10. Children’s Privacy</h2>
-        <p>This application is not intended for children and does not target users under the age of 13.</p>
-      </section>
+      <hr />
 
-      <section class="section">
-        <h2>11. User Control &amp; Responsibility</h2>
-        <ul>
-          <li>Admins are responsible for the data they enter</li>
-          <li>Admins should ensure they have legal rights to store customer information</li>
-          <li>Admins can delete or restore records within the app</li>
-        </ul>
-      </section>
+      <h2>6. Data Storage and Security</h2>
+      <p>
+        All data is stored securely using Firebase services. Authentication is handled through Firebase Authentication,
+        and application data is stored in Firebase Firestore with owner-based access rules to ensure data isolation.
+        Export files are generated using secure Cloud Functions, stored privately, and delivered only via email. Direct
+        client access to export files is blocked.
+      </p>
+      <p>
+        Subscription records that are soft-deleted are marked as deleted and hidden from primary views. These records
+        are retained for up to 30 days, during which they can be restored. After this retention period, the records are
+        permanently deleted.
+      </p>
 
-      <section class="section">
-        <h2>12. Changes to This Policy</h2>
-        <p>
-          We may update this Privacy Policy from time to time.
-          Any changes will be reflected with an updated “Last updated” date.
-        </p>
-      </section>
+      <hr />
 
-      <section class="section">
-        <h2>13. Contact Information</h2>
-        <p>If you have questions about this Privacy Policy or data handling, please contact:</p>
-        <p>
-          <strong>Email:</strong> dnishu970@gmail.com<br />
-          <strong>App Name:</strong> Subscription Manager
-        </p>
+      <h2>7. App Permissions</h2>
+      <p>
+        The application does not request access to sensitive device permissions such as the camera, microphone,
+        location, contacts, SMS, call logs, or file and media storage. The only required permission is internet access,
+        which is necessary for authentication, data synchronization, and export generation and delivery.
+      </p>
 
-        <p class="footer">© 2026 Subscription Manager. All rights reserved.</p>
-      </section>
+      <hr />
+
+      <h2>8. Third-Party Services</h2>
+      <p>
+        Subscription Manager uses trusted third-party services to provide core functionality. These include Firebase for
+        authentication, database storage, cloud functions, and secure file handling, as well as SendGrid for delivering
+        export files via email. These services process data only to the extent required to perform their intended
+        functions.
+      </p>
+
+      <hr />
+
+      <h2>9. Data Retention</h2>
+      <p>
+        Active data is retained until it is deleted by the user. Soft-deleted data is retained for a period of 30 days
+        before being permanently removed. Export-related records are retained only for audit purposes and delivery
+        tracking.
+      </p>
+
+      <hr />
+
+      <h2>10. Children’s Privacy</h2>
+      <p>
+        This application is not intended for use by children and does not target users under the age of 13.
+      </p>
+
+      <hr />
+
+      <h2>11. User Responsibility</h2>
+      <p>
+        Users are responsible for the accuracy and legality of the data they enter into the application. Users must
+        ensure that they have the appropriate rights and permissions to store customer information. Users can delete or
+        restore records within the app, and access to data is restricted to the user’s own records unless administrative
+        privileges are granted.
+      </p>
+
+      <hr />
+
+      <h2>12. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. Any changes will be reflected by updating the “Last updated”
+        date at the top of this page.
+      </p>
+
+      <hr />
+
+      <h2>13. Contact Information</h2>
+      <p>
+        If you have any questions regarding this Privacy Policy or how data is handled, please contact us at:
+      </p>
+      <p>
+        <strong>Email:</strong> <a href="mailto:dnishu970@gmail.com">dnishu970@gmail.com</a><br />
+        <strong>App Name:</strong> Subscription Manager
+      </p>
+
+      <p class="footer">© 2026 Subscription Manager. All rights reserved.</p>
     </main>
   </div>
 </body>
